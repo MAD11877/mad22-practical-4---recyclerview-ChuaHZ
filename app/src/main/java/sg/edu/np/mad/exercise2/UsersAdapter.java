@@ -49,6 +49,12 @@ public class UsersAdapter extends RecyclerView.Adapter<UserViewHolder> {
         holder.name.setText(s.Name);
         holder.desc.setText((s.Description));
         Log.d("HIHI","OnBind"+position);
+                if(s.Name.endsWith("7")){
+                    holder.bigimg.setVisibility(View.VISIBLE);
+                }
+                else{
+                    holder.bigimg.setVisibility(View.GONE);
+                }
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
